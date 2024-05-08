@@ -1,0 +1,92 @@
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        09-05-2024     00:51                Part-A
+
+
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2> cd Part-A
+**********************************************git vesrion***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git --version
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git --version
+git version 2.45.0.windows.1
+
+**********************************************Intilize on local machine***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git init
+>>
+Reinitialized existing Git repository in C:/Users/Abhishek/OneDrive/Documents/Desktop/WadPractcise/Assign2/Part-A/.git/
+
+
+**********************************************Add file***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git add .
+
+**********************************************Check the status***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   abhishek.txt
+
+
+**********************************************Add path of remote rpository before commit***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git remote add orgin "https://github.com/abhisheknighut45/Wadpractiseassignment2.git"
+
+
+**********************************************Add commit***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git commit -m "first commit"
+>>
+[master (root-commit) bc77861] first commit
+ 1 file changed, 4 insertions(+)
+ create mode 100644 abhishek.txt
+**********************************************status after commit***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git status
+On branch master
+nothing to commit, working tree clean
+
+**********************************************push on repository***************************************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git push -u origin master
+**********************************************this error due to alredy present repository***************************************************
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+*****************************************remove alredy present repository********************************************************
+
+        *****************************************check remote repository**********************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git remote -v
+orgin   https://github.com/abhisheknighut45/Wadpractiseassignment2.git (fetch)
+orgin   https://github.com/abhisheknighut45/Wadpractiseassignment2.git (push)
+
+*****************************************give error due to alredy present repository**********************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+*****************************************remove alredy present repository**********************************
+
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git remote remove origin  
+error: No such remote: 'origin'
+
+*****************************************now add  current  repository**********************************
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git remote add origin https://github.com/abhisheknighut45/Wadpractiseassignment2.git
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git remote add origin https://github.com/abhisheknighut45/Wadpractiseassignment2.git
+error: remote origin already exists.
+
+*****************************************now done push **********************************
+
+
+PS C:\Users\Abhishek\OneDrive\Documents\Desktop\WadPractcise\Assign2\Part-A> git push -u origin master                                 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 271 bytes | 67.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/abhisheknighut45/Wadpractiseassignment2.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
